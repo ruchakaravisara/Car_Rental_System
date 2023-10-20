@@ -4,8 +4,12 @@
     <meta charset="UTF-8">
     <title>User</title>
     <meta content="width=device-width initial-scale=1" name="viewport">
-    <link href="assets/css/bootstrap.min.css">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/style/userDashboard.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
 
 </head>
 <body>
@@ -26,11 +30,58 @@
     <h1 id="userh1">
         "Streamlining Your Journey: The Ultimate Car Rental Experience"
     </h1>
-    <P id="userp">"Discover the future of hassle-free travel with our cutting-edge Car Rental System website. Whether you're
-        planning a road trip, a business trip,<br> or just need a reliable set of wheels for a day, our platform offers a
-        seamless and convenient way to rent a car. Browse an extensive fleet of vehicles,<br>compare prices, book with
-        ease, and hit the road with confidence. Experience the freedom of mobility like never before."</P>
+    <P id="userp">"Discover the future of hassle-free travel with our cutting-edge<br> Car Rental System website. Whether you're
+        planning a road trip,<br> a business trip, or just need a reliable set of wheels for a day, our<br> platform offers a
+        seamless and convenient way to rent a car.<br> Browse an extensive fleet of vehicles,<br>compare prices, book with
+        ease, and hit the road with confidence.<br> Experience the freedom of mobility like never before."</P>
     </div>
 </main>
+<!--////////////////////////user account////////////////////-->
+<main id="UserAccount" class="container-fluid">
+    <div>
+        <h1 >Create Your Account</h1>
+
+        <form id="userRegisterForm">
+            <div>
+                <input id="txtCustomerName" type="text" class="form-control"  placeholder="Enter Name" name="name">
+                <input id="txtCustomerNIC" type="text" class="form-control"  placeholder="Enter NIC Number" name="nic">
+
+            </div>
+            <div>
+                <input id="txtCustomerDrivingLicense" type="text" class="form-control"  placeholder="Enter Driving License" name="drivingLicense">
+                <input id="txtCustomerContactNumber" type="text" class="form-control"  placeholder="Enter Contact Number" name="contactNumber">
+            </div>
+            <div>
+                <input id="txtCustomerEmail" type="text" class="form-control" placeholder="Enter Email" name="email">
+                <input id="txtCustomerAddress" type="text" class="form-control"  placeholder="Enter Address" name="address">
+            </div>
+            <div>
+                <input id="txtCustomerPassword" type="text" class="form-control" placeholder="Enter New Password" name="password">
+            </div>
+            <div>
+                <img src="assets/img/uploadicon.png">
+                <div>
+                    <p>Upload your NIC or Lisense Photo</p>
+                    <input id="file" name="img" type="file">
+                </div>
+            </div>
+            <div>
+                <button id="btnSignUp" type="button" class="btn btn-success">Sign Up</button>
+            </div>
+            <div id="line1"></div>
+            <div id="line2"></div>
+            <div id="or">
+                <h1>OR</h1>
+            </div>
+
+        </form>
+    </div>
+    <div>
+        <p>Alreary have account sign in <a id="logHere" href="#">here</a></p>
+    </div>
+</main>
+<script src="assets/js/frameworks/bootstrap.bundle.min.js"></script>
+<script src="assets/js/frameworks/jquery-3.6.1.min.js"></script>
+<script src="assets/js/frameworks/jquery-3.7.0.min.js"></script>
 </body>
 </html>
