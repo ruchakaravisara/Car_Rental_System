@@ -1,0 +1,67 @@
+/**{
+
+    background: url("../img/carone.jpg")no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+}*/
+
+#carimage{
+    height: 100vh;
+    width: 100vw;
+    background: url("../img/carone.jpg")no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+}
+
+#UserDashBoardHeadNav{
+    z-index: 1;
+    position: absolute;
+    top: 5px;
+    right: 65px;
+}
+
+#UserDashBoardHeadNav>ul>li{
+    display: inline-block;
+    padding-left: 25px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 45px;
+
+}
+#UserDashBoardHeadNav>ul>li:nth-child(1)>a:hover{
+    text-decoration: none;
+}
+#UserDashBoardHeadNav>ul>li:nth-child(1)>a{
+    color: black;
+    font-weight: 800;
+}
+#UserDashBoardHeadNav>ul>li>a{
+    color: #6c757d;
+    text-decoration: none;
+}
+
+#userh1{
+    position: absolute;
+    color: white;
+    top: 200px;
+    left: 100px;
+    font-size: 50px;
+
+
+}
+#userp{
+    position: absolute;
+    color:yellow;
+    top: 350px;
+    left: 100px;
+    font-size: 20px;
+
+
+}
