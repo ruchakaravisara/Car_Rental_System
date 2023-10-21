@@ -325,7 +325,84 @@
     </div>
     <button id="btnSendRentalRequest" class="btn btn-primary">Send Rental Request</button>
 </main>
+<main id="UserViewCarRents" class="container-fluid">
+    <div></div>
+    <div></div>
+    <div>
+        <h1 >Car Rent View .</h1>
+        <button id="btnReloadTable" class="btn " type="button" >Table Reload</button>
+        <form>
+            <table class="table table-hover" >
+                <thead class="table-warning ">
+                <tr>
+                    <th scope="col">Car</th>
+                    <th scope="col">Driver</th>
+                    <th scope="col">Pending Payment</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">status</th>
+                    <th scope="col">Delete</th>
+                </tr>
+                </thead>
+                <tbody id="tblCarRentsView">
 
+                </tbody>
+            </table>
+        </form>
+
+        <div>
+            <h1>Pick Up Venue</h1>
+            <h2 id="pickupPlace">store</h2>
+        </div>
+        <div>
+            <h1>Return Venue</h1>
+            <h2 id="returnPlace">colombo</h2>
+        </div>
+    </div>
+
+    <div>
+        <h1 class="userNameTag"></h1>
+        <h2 id="userCheckOutEmailTag" class="userEmailTag"></h2>
+        <button type="button" class="btn" id="customerUpdateModalShow" data-bs-toggle="modal" data-bs-target="#customerUpdatePopUp">Update</button>
+    </div>
+    <div>
+        <button class="btn"><img src="assets/img/logout.png"> Log Out</button>
+    </div>
+
+
+    <div class="modal fade" id="customerUpdatePopUp" tabindex="-1"  aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" >Update Customer</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="txtCustomerUName" class="form-label">Name</label>
+                        <input class="form-control form-control-sm" id="txtCustomerUName" type="text">
+                        <!--                        <p id="">Input Content is not matching</p>-->
+                    </div>
+                    <div class="mb-3">
+                        <label for="txtCustomerUAddress" class="form-label">Address</label>
+                        <input class="form-control" type="text" id="txtCustomerUAddress">
+                        <!--                        <p id="">Input Content is not matching Required type 'C001'</p>-->
+                    </div>
+                    <div class="mb-3">
+                        <label for="txtCustomerUContactNumber" class="form-label">Contact Number</label>
+                        <input class="form-control" type="text" id="txtCustomerUContactNumber">
+                        <!--                        <p id="lblCustomerNameUValidate">Input Content is not matching</p>-->
+                    </div>
+
+
+
+                </div>
+                <div class="modal-footer">
+                    <button id="btnUpdateCustomer" type="button" class="btn btn-warning">Update</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
 <script src="assets/js/frameworks/bootstrap.bundle.min.js"></script>
 <script src="assets/js/frameworks/jquery-3.6.1.min.js"></script>
 <script src="assets/js/frameworks/jquery-3.7.0.min.js"></script>
