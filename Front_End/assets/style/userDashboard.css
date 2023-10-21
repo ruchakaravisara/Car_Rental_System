@@ -116,4 +116,48 @@
     justify-content: center;
 }
 /*/////////////////////////////user loging////////////////////////*/
+#UserLoginAccount>div:nth-child(1){
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 100px;
+}
+#UserLoginAccount>div>h1,#UserLoginAccount>div>form>div>h1{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.1rem;
+    line-height: 60px;
+}
+#UserLoginAccount>div>form{
+    width: 35%;
+}
 
+#UserLoginAccount>div>form>input:nth-child(1){
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+#UserLoginAccount>div>form>input:nth-child(2){
+    margin-bottom: 20px;
+}
+#UserLoginAccount>div>form>p{
+    margin: 0;
+}
+#btnSignnUp{
+
+    background-color: #3d98ef;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    width: 100%;
+}
+
+#bar{
+    border:1px solid black;
+}
+#orr{
+    display: flex;
+    justify-content: center;
+
+}
