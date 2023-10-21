@@ -64,3 +64,75 @@
     font-size: 20px;
 
 }
+/*///////////////////////////////usercreateAcc///////////////////////////////*/
+
+
+#UserAccount>div:nth-child(1),#UserAccount>div:nth-child(2){
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 70px;
+}
+#UserAccount>div>h1,#UserAccount>div>form>div>h1{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.1rem;
+    line-height: 60px;
+}
+#UserAccount>div>form{
+    width: 50%;
+}
+#UserAccount>div>form>div{
+    display: flex;
+    gap: 2%;
+    flex-direction: row;
+    margin: 2%;
+}
+#UserAccount>div>form>div>img{
+    height: 3rem;
+}
+#UserAccount>div>form>div>div>p{
+    margin-bottom: 0;
+}
+#UserAccount>div>form>div>div>input{
+    font-size: 9px;
+}
+#btnSignUp{
+    width: 100%;
+    background-color: #20c997;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+
+}
+
+#bar{
+    border:1px solid black;
+}
+#or{
+    display: flex;
+    justify-content: center;
+}
+/*#btnSignIn{
+    width: 100%;
+    background-color: #2572E6;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+
+}*/
+/*
+#line1{
+    position: absolute;
+    border: 1px solid;
+    width: 19rem;
+}
+#line2{
+    position: absolute;
+    border: 1px solid;
+    width: 19rem;
+    right: 375px;
+}
+*/
