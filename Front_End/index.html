@@ -265,9 +265,65 @@
                 <h1>Lost Damage Waivor</h1>
             </div>
         </div>
-        <button type="button" data-register="zzzzz" class="btn btn-danger btnAddToCart">Add to Cart</button>
+        <button type="button" data-register="zzzzz" class="btn btn-success btnAddToCart">Add to Cart</button>
     </div>
 
+</main>
+<main id="UserCheckOut" class="container-fluid">
+    <div></div>
+    <div></div>
+    <div>
+        <h1 >Car Checkout.</h1>
+
+        <form>
+            <table class="table table-hover" >
+                <thead class="table-primary ">
+                <tr>
+                    <th scope="col">Car</th>
+                    <th scope="col">Daily</th>
+                    <th scope="col">Monthly</th>
+                    <th scope="col">OnHold</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Driver</th>
+                    <th scope="col">Lost Damage Waiver</th>
+                    <th scope="col">Delete</th>
+                </tr>
+                </thead>
+                <tbody id = "tableCheckOutCart">
+
+
+
+
+                </tbody>
+            </table>
+        </form>
+    </div>
+    <div>
+        <h1>Pick Up Venue</h1>
+        <input id="txtPickUpVenueCheckOut" type="text" class="form-control"  placeholder="Enter PickUp Venue">
+    </div>
+    <div>
+        <h1>Return Venue</h1>
+        <input id="txtReturnVenueCheckOut" type="text" class="form-control"  placeholder="Enter Return Venue">
+    </div>
+    <div>
+        <div>
+
+
+        </div>
+        <div>
+
+
+        </div>
+        <div>
+
+        </div>
+    </div>
+    <div>
+        <h1 class="userNameTag"></h1>
+        <h2 class="userEmailTag"></h2>
+    </div>
+    <button id="btnSendRentalRequest" class="btn btn-primary">Send Rental Request</button>
 </main>
 <script src="assets/js/frameworks/bootstrap.bundle.min.js"></script>
 <script src="assets/js/frameworks/jquery-3.6.1.min.js"></script>
