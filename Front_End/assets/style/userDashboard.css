@@ -282,3 +282,22 @@
 .card-body>button{
     width: 100%;
 }
+/*///////////////////////car view/////////////////////////*/
+#userCarCatalogue>div:nth-child(3){
+    position: relative;
+    top: 70px;
+
+}
+#userCarCatalogue>div:nth-child(4)>p{
+    padding-top: 30px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    margin: 0;
+}
+#userCarCatalogue>div:nth-child(3)>h1,#userCarCatalogue>div:nth-child(4)>h1{
+    font-weight: 700;
+    font-size: 2rem;
+    font-style: normal;
+    margin: 0;
+}
