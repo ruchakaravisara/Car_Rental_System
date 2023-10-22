@@ -71,6 +71,7 @@
     z-index: -1;
     height: 100vh;
     width: 100vw;
+    right: 10px;
     background: url("../img/car4.jpg")no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -106,6 +107,7 @@
 }
 #UserAccount>div>form>div>div>p{
     margin-bottom: 0;
+    color: white;
 
 }
 #UserAccount>div>form>div>div>input{
@@ -174,6 +176,20 @@
 
 }
 /*////////////////////////////store/////////////////////////////*/
+#backgrounduserstore{
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    height: 100vh;
+    width: 100vw;
+    right: 10px;
+    background: url("../img/car4.jpg")no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
 #UserStore>div:nth-child(2){
     position: relative;
     top: 150px;
@@ -378,6 +394,20 @@
     flex-wrap: wrap;
 }
 /*////////////////user check/////////////////////*/
+
+#checkout{
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    height: 100vh;
+    width: 100vw;
+    right: 10px;
+    background: url("../img/car4.jpg")no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
 #UserAccountNav{
     z-index: 1;
     position: absolute;
