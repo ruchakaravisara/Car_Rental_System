@@ -1,0 +1,71 @@
+#adminDashBoard>section:nth-child(1){
+    position: fixed;
+    width: 279px;
+    height: 100vh;
+    background-color:#20c997 ;
+}
+#adminDashBoard>section:nth-child(2){
+    padding-left: 279px;
+}
+
+#adminDashBoard>section:nth-child(1){
+    display: flex;
+    flex-direction: column;
+
+}
+#adminDashBoard>section:nth-child(1)>div:nth-child(1){
+    font-size: 2rem;
+    text-align: center;
+    color: #040505;
+    padding-bottom: 3rem;
+    font-family: 'Cambria';
+    font-style: normal;
+    font-weight: 400;
+
+
+}
+
+
+#adminDashBoard>section:nth-child(1)>div:nth-child(3){
+    display: flex;
+    flex-direction: column;
+    padding-top: 1rem;
+    padding-left: 2rem;
+}
+#adminDashBoard>section:nth-child(1)>div:nth-child(3)>div>h1{
+
+    font-family: 'Calibri';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.3rem;
+    line-height: 35px;
+    color: #004085;
+    cursor: pointer;
+}
+#adminDashBoard>section:nth-child(1)>div:nth-child(3)>div>h1:hover{
+    color: white;
+}
+#adminDashBoard>section:nth-child(1)>div:nth-child(3)>div:nth-child(1)>h1{
+    color: white;
+
+}
+#adminDashBoard>section:nth-child(1)>div:nth-child(4){
+    display: flex;
+    justify-content: center;
+}
+
+#adminDashBoard>section:nth-child(1)>div:nth-child(4)>button{
+    font-weight: 1000;
+    font-size: 1rem;
+    color: white;
+    padding-top: 2rem;
+}
+#adminDashBoard>section:nth-child(1)>div:nth-child(4)>button:hover{
+    color: #b3d7ff;
+}
+
+
+
+
+
+
