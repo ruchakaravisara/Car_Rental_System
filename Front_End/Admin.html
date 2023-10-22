@@ -33,10 +33,47 @@
             <button class="btn"><i class="fas fa-sign-out-alt"></i> logOut</button>
         </div>
     </section>
-
-
 </main>
+<main id="adminCustomer" class="container-fluid.p0">
+    <section></section>
+    <section>
+        <div>
+            <h1>Customer Verification</h1>
+        </div>
+        <div>
+            <table class="table table-hover" >
+                <thead class="table-primary ">
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">NIC</th>
+                    <th scope="col">Driving License</th>
+                    <th scope="col">Contact Number</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Image</th>
+                    <th scope="col">Status</th>
+                </tr>
+                </thead>
+                <tbody id="tblCustomerVerification">
+                </tbody>
+            </table>
+        </div>
+        <div id="modalCustomer" class="modal" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">NIC /Driving License</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img id="modalCustomerImg" src="https://tse4.mm.bing.net/th?id=OIP.pRv9p80mHitjVVNR3nWsqwHaFj&pid=Api&P=0">
+                    </div>
 
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
 <script src="assets/js/frameworks/bootstrap.bundle.min.js"></script>
 <script src="assets/js/frameworks/jquery-3.6.1.min.js"></script>
 <script src="assets/js/frameworks/jquery-3.7.0.min.js"></script>
