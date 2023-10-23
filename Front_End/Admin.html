@@ -482,6 +482,61 @@
         </div>
     </section>
 </main>
+<main id="adminManager" class="container-fluid.p0">
+    <section></section>
+    <section>
+        <div>
+            <h1>Admin Manager</h1>
+
+        </div>
+        <div>
+            <form id="adminForm">
+                <div>
+                    <div>
+                        <h3>Admin Id</h3>
+                        <input id="txtAdminId" type="text" class="form-control" placeholder="Admin Id" name="adminId">
+                    </div>
+                    <div>
+                        <h3>Email</h3>
+                        <input id="txtAdminEmail"   type="text" class="form-control" placeholder="Enter Email" name="email">
+                    </div>
+                    <div>
+                        <h3>UserName</h3>
+                        <input id="txtAdminUserName"  type="text" class="form-control"  placeholder="Enter Username" name="username">
+                    </div>
+                </div>
+
+                <div>
+                    <div>
+                        <h3>Password</h3>
+                        <input id="txtAdminPassword"  id="" type="text" class="form-control"  placeholder="Enter Password" name="password">
+                    </div>
+                    <div id="adminButtonField">
+                        <button type="button" class="btn btn-success" id="btnAdminSave">Save</button>
+                        <button type="button" class="btn btn-warning" id="btnAdminUpdate">Update</button>
+                        <button type="button" class="btn btn-danger" id="btnAdminDelete">Delete</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+        <div>
+            <table class="table table-hover" >
+                <thead class="table-active ">
+                <tr>
+                    <th scope="col">Admin Id</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">UserName</th>
+                    <th scope="col">Password</th>
+
+                </tr>
+                </thead>
+                <tbody id="tblAdmin">
+                </tbody>
+            </table>
+        </div>
+    </section>
+</main>
 <script src="assets/js/frameworks/bootstrap.bundle.min.js"></script>
 <script src="assets/js/frameworks/jquery-3.6.1.min.js"></script>
 <script src="assets/js/frameworks/jquery-3.7.0.min.js"></script>
