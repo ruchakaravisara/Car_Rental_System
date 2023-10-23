@@ -88,5 +88,92 @@
 }
 
 
+/*/////////////////////manage cars/////////////////////////*/
+#adminAddCar>section:nth-child(2){
+    padding-left: 279px;
+}
+#adminAddCar>section:nth-child(2)>div:nth-child(1){
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+#adminAddCar>section:nth-child(2)>div:nth-child(1)>div{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #007bff;
+    padding-right: 4rem;
+    line-height: 52px;
+}
+#adminAddCar>section:nth-child(2)>div:nth-child(1)>div:hover{
+    color: #ea1f1f;
+    cursor: pointer;
+}
+#adminAddCar>section:nth-child(2)>div:nth-child(1)>h1{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 52px;
+    padding-left: 10px;
 
 
+}
+
+#adminAddCar>section:nth-child(2)>div:nth-child(2)>form{
+
+    display: flex;
+    flex-direction: column;
+}
+#adminAddCar>section:nth-child(2)>div:nth-child(2)>form>div{
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+    padding: 1rem;
+    justify-content: space-around;
+
+}
+#adminAddCar>section:nth-child(2)>div:nth-child(2)>form>div>div{
+
+    width: 100%;
+
+
+}
+#adminAddCar>section:nth-child(2)>div:nth-child(2)>form>div>div>h3{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 30px;
+    color: #000000;
+}
+#ImgChooser {
+    display: flex;
+    align-items: flex-end;
+}
+
+#ImgChooser>div {
+    display: flex;
+    gap: 10px;
+    width: 9.8rem;
+}
+#ImgChooser>div>img{
+    height: 2.5rem;
+}
+#ImgChooser>div>div>p{
+    font-size: 0.75rem;
+    margin-bottom: 0;
+}
+#ImgChooser>div>div>input{
+    font-size: 0.5rem;
+}
+#addCarSaveButton{
+    display: flex;
+    align-items: flex-end;
+}
+#addCarSaveButton>button{
+    width: 100%;
+}
