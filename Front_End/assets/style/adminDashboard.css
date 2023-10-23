@@ -299,3 +299,14 @@
 #adminCustomerReservation>section:nth-child(2)>div:nth-child(1){
     padding-top: 2rem;
 }
+#adminCustomerReservation>section:nth-child(2)>div:nth-child(2){
+    padding: 0.7rem;
+}
+#adminCustomerReservation>section:nth-child(2)>div:nth-child(1)>h1{
+    font-size: 1.8rem;
+    line-height: 52px;
+    padding-left: 10px;
+    font-style: normal;
+    font-weight: 700;
+
+}
