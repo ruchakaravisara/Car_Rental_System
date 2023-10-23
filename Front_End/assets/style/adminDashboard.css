@@ -177,3 +177,8 @@
 #addCarSaveButton>button{
     width: 100%;
 }
+#colorr>input{
+    width: 10%;
+    border-radius: 100%;
+}
+/*///////////////////*/
