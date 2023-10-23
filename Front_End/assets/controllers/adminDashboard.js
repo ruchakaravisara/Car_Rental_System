@@ -33,3 +33,10 @@ $('#btnCarDetail').click(function () {
     $('#adminCustomerReservation').css('display','none');
 });
 
+$('.Reservation').click(function (){
+    $('#adminDashBoard').css('display','block');
+    $('#adminCustomerReservation').css('display','block');
+    $('#adminCarDetail').css('display','none');
+    $('#adminAddCar').css('display','none');
+    $('#adminCustomer').css('display','none');
+});
