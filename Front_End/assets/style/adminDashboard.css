@@ -226,3 +226,7 @@
     font-style: normal;
     font-weight: 700;
 }
+#adminCarDetail>section:nth-child(2)>div:nth-child(2)>form{
+    display: flex;
+    flex-direction: column;
+}
