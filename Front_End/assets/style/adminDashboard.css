@@ -86,7 +86,34 @@
     padding-left: 10px;
 
 }
-
+.btnViewCustomerImg{
+    color: #005cbf;
+    padding: 0;
+}
+.btncusDeny{
+    color: #F04C4C;
+    padding: 0;
+    padding-left: 0.5rem;
+}
+.btncusAccept:hover{
+    color: #2d7d3c;
+    padding: 0;
+    padding-left: 0.5rem;
+}
+.btncusDeny:hover{
+    color: #F04C4C;
+    padding: 0;
+    padding-left: 0.5rem;
+}
+.btncusAccept{
+    color: #2d7d3c;
+    padding: 0;
+    padding-left: 0.5rem;
+}
+#modalCustomerImg{
+    height: 312px;
+    width: 466px;
+}
 
 /*/////////////////////manage cars/////////////////////////*/
 #adminAddCar>section:nth-child(2){
@@ -181,4 +208,7 @@
     width: 10%;
     border-radius: 100%;
 }
-/*///////////////////*/
+/*///////////////////car detais //////////////////////////////*/
+#adminCarDetail>section:nth-child(2){
+    padding-left: 279px;
+}
