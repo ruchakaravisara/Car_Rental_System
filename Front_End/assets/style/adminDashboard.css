@@ -396,3 +396,68 @@
 #adminManager>section:nth-child(2){
     padding-left: 279px;
 }
+#adminManager>section:nth-child(2)>div:nth-child(1){
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#adminManager>section:nth-child(2)>div:nth-child(1)>h1{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 52px;
+    padding-left: 10px;
+
+
+}
+
+#adminManager>section:nth-child(2)>div:nth-child(2)>form{
+
+    display: flex;
+    flex-direction: column;
+}
+#adminManager>section:nth-child(2)>div:nth-child(2)>form>div{
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+    padding: 1rem;
+    justify-content: space-around;
+
+}
+#adminManager>section:nth-child(2)>div:nth-child(2)>form>div>div{
+
+    width: 100%;
+
+
+}
+#adminManager>section:nth-child(2)>div:nth-child(2)>form>div>div>h3{
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 30px;
+    color: #000000;
+    font-style: normal;
+
+}
+
+
+
+#adminButtonField{
+    display: flex;
+
+    align-items: flex-end;
+    gap: 1rem;
+}
+#adminButtonField>button{
+    width: 100%;
+}
+#adminManager>section:nth-child(2)>div:last-child{
+    padding-left: 1rem;padding-right: 1rem;
+}
+#adminManager>section:nth-child(2)>div:last-child>tbody{
+    height: 200px;
+    overflow-y: scroll;
+}
