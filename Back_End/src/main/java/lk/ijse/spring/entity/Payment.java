@@ -7,6 +7,9 @@ import lombok.ToString;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+import java.time.LocalDate;
 
 @Entity
 @AllArgsConstructor
@@ -17,4 +20,13 @@ public class Payment {
     @Id
     private String paymentId;
 
+    @OneToOne
+    private Rental rental;
+    private LocalDate date;
+    private double amount;
+    private double damageCost;
+    private String damageDescription;
+    private long extraMileage;
+    private double costPerExtraMileage;
+    private double driverWages;
 }
