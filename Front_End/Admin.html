@@ -539,6 +539,93 @@
 </main>
 <main id="adminPayment" class="container-fluid.p0">
     <section></section>
+    <section>
+        <div>
+            <h1>Payment</h1>
+        </div>
+        <div>
+            <div>
+                <h3>Reservation Id</h3>
+                <select id="selectReservationIds" class="form-control" aria-label="Default select example">
+                    <option selected="">Available</option>
+                    <option value="1">Not Available</option>
+                </select>
+            </div>
+            <div>
+                <div>
+                    <h3>Customer</h3>
+                    <div id="pcusname">--------------</div>
+                </div>
+                <div>
+                    <h3>Pick Up Date</h3>
+                    <div id="pcuspdate">--------------</div>
+                </div>
+                <div>
+                    <h3>ReturnDate</h3>
+                    <div id="pcusrdate">--------------</div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h1>Rentals</h1>
+        </div>
+        <div>
+            <table class="table table-hover" >
+                <thead class="table-primary ">
+                <tr>
+                    <th scope="col">Car</th>
+                    <th scope="col">Driver</th>
+                    <th scope="col">Due Amount</th>
+                    <th scope="col">Paid Loss Damage Waiver Amount</th>
+
+
+                </tr>
+                </thead>
+                <tbody id="tblPaymentTable">
+                </tbody>
+            </table>
+        </div>
+        <div>
+            <div>
+                <h3>Total Due Amount</h3>
+                <input id="txtPaymentTotalDueAmount" type="number" class="form-control"  placeholder="Display Total Due Amount" readonly>
+            </div>
+            <div>
+                <h3>Total Paid Loss Damage Waiver Amount</h3>
+                <input id="txtPaymentTotalPaidLossDamageWaiverAmount" type="number" class="form-control "  placeholder="Display Total Paid Loss Damage Waiver Amount" readonly>
+            </div>
+            <div>
+                <h3>Damage Cost</h3>
+                <input id="txtPaymentDamageCost" type="text" class="form-control txtInputPayment"  placeholder="Enter Damage Cost">
+            </div>
+            <div>
+                <h3>Extra Km</h3>
+                <input id="txtPaymentExtraKm" type="number" class="form-control txtInputPayment"  placeholder="Enter Extra Km">
+            </div>
+            <div>
+                <h3>Extra Km Cost</h3>
+                <input id="txtPaymentExtraKmCost" type="number" class="form-control txtInputPayment"   placeholder="Enter Extra Km Cost">
+            </div>
+            <div>
+                <h3>Return Damage Waiver Amount</h3>
+                <input id="txtPaymentReturnDamageWaiverAmount" type="number" class="form-control txtInputPayment"   placeholder="Enter Return Damage Waiver Amount">
+            </div>
+            <div>
+                <h3>Driver Wages</h3>
+                <input id="txtPaymentDriverWages" type="number" class="form-control txtInputPayment"  placeholder="Enter Driver Wages">
+            </div>
+            <div>
+                <h3>Damage Description</h3>
+                <input id="txtPaymentDamageDescription" type="text" class="form-control txtInputPayment"   placeholder="Enter Damage Description">
+            </div>
+            <div>
+                <h3>Total Amount For Pay</h3>
+                <input id="txtPaymentTotalAmountForPay" type="number" class="form-control txtInputPayment"   placeholder="Display Total Amount For Pay" readonly>
+            </div>
+
+        </div>
+        <div><button id="btnPay" type="button" class="btn PaymentButton">Pay</button></div>
+    </section>
 </main >
 <script src="assets/js/frameworks/bootstrap.bundle.min.js"></script>
 <script src="assets/js/frameworks/jquery-3.6.1.min.js"></script>
