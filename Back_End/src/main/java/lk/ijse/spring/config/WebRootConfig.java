@@ -2,12 +2,13 @@ package lk.ijse.spring.config;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 
 @Configuration
 @Import({JpaConfig.class})
-//componentscan eka danna metanata
+@ComponentScan(basePackages = "lk.ijse.spring.service")
 public class WebRootConfig {
 
     //this Config class is assigned for pojo's which is processing
