@@ -7,6 +7,8 @@ import lombok.ToString;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import java.util.List;
 
 @Entity
 @AllArgsConstructor
@@ -24,4 +26,7 @@ public class Customer {
     private String address;
     private String imageLocation;
     private String status;
+
+    @OneToMany(mappedBy = "driver")
+    private List<RentalDetail> rentalDetailList;
 }
