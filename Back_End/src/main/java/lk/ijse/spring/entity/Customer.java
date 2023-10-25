@@ -27,6 +27,5 @@ public class Customer {
     private String imageLocation;
     private String status;
 
-    @OneToMany(mappedBy = "driver")
-    private List<RentalDetail> rentalDetailList;
+
 }
