@@ -81,11 +81,12 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public CustomerDTO searchCustomerByEmail(String email) {
-        return null;
+        Customer customerEmail = repo.findCustomerByEmail(email);
+        return mapper.map(customerEmail,CustomerDTO.class);
     }
 
     @Override
     public CustomerDTO searchCustomerByEmailAndPassword(String email, String password) {
-        return null;
+        return mapper.map(repo.findCustomerByEmailAndPassword(email, password),CustomerDTO.class);
     }
 }
