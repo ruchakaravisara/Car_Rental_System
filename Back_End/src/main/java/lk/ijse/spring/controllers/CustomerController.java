@@ -39,4 +39,9 @@ public class CustomerController {
         ArrayList<CustomerDTO> allCustomers = service.getAllCustomers();
         return new ResponseUtil("OK"," Done",allCustomers);
     }
+    @GetMapping(params = "email")
+    public ResponseUtil checkLogCustomer(String email,String password) {
+        CustomerDTO dto = service.searchCustomerByEmailAndPassword(email,password);
+        return new ResponseUtil("OK", "Logging", dto);
+    }
 }
