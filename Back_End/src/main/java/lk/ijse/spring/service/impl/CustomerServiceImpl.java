@@ -69,7 +69,9 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public void updateCustomerReservation(String nic, String status) {
-
+        Customer cus = repo.findCustomerByNic(nic);
+        CustomerDTO customer = new CustomerDTO(cus.getName(), cus.getNic(), cus.getDrivingLicense(), cus.getEmail(), cus.getPassword(), cus.getContactNumber(), cus.getAddress(), cus.getImageLocation(), status);
+        repo.save(mapper.map(customer,Customer.class));
     }
 
     @Override

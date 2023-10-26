@@ -20,4 +20,16 @@ public class CustomerDTO {
     private String status;
     private MultipartFile img;
 
+    public CustomerDTO(String name, String nic, String drivingLicense, String email, String password, String contactNumber, String address, String imageLocation, String status) {
+        this.name = name;
+        this.nic = nic;
+        this.drivingLicense = drivingLicense;
+        this.email = email;
+        this.password = password;
+        this.contactNumber = contactNumber;
+        this.address = address;
+        this.imageLocation = imageLocation;
+        this.status = status;
+    }
+
 }
