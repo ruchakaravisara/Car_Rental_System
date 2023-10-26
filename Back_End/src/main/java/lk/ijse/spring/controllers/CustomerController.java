@@ -29,7 +29,7 @@ public class CustomerController {
     }
 
     @PutMapping
-    public ResponseUtil updateCustomer(CustomerDTO dto){
+    public ResponseUtil updateCustomer(@RequestBody CustomerDTO dto){
         service.updateCustomer(dto);
         return new ResponseUtil("Ok",dto.getNic()+": Updated.!",null);
     }
@@ -43,5 +43,19 @@ public class CustomerController {
     public ResponseUtil checkLogCustomer(String email,String password) {
         CustomerDTO dto = service.searchCustomerByEmailAndPassword(email,password);
         return new ResponseUtil("OK", "Logging", dto);
+    }
+    @GetMapping(params = "em")
+    public ResponseUtil checkLogCustomer(String em) {
+        CustomerDTO customerDTO = service.searchCustomerByEmail(em);
+        return new ResponseUtil("Ok", "request Sent", customerDTO);
+    }
+
+    @PutMapping("/")
+    public ResponseUtil updateCustomerReservation(@RequestParam String nic,@RequestParam String status) {
+
+
+        service.updateCustomerReservation(nic,status);
+        return new ResponseUtil("Ok",nic+": Updated.!",null);
+
     }
 }
