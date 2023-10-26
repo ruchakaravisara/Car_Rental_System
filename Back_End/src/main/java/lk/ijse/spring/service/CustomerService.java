@@ -9,6 +9,9 @@ public interface CustomerService {
      void deleteCustomer(String id);
      void updateCustomer(CustomerDTO dto);
      ArrayList<CustomerDTO> getAllCustomers();
+     void updateCustomerReservation(String nic,String status);
+     CustomerDTO searchCustomerByName(String name);
 
-
+     CustomerDTO searchCustomerByEmail(String email);
+     CustomerDTO searchCustomerByEmailAndPassword(String email,String password);
 }

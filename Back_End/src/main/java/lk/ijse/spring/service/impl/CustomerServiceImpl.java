@@ -66,4 +66,24 @@ public class CustomerServiceImpl implements CustomerService {
         return mapper.map(repo.findAll(), new TypeToken<ArrayList<CustomerDTO>>() {
         }.getType());
     }
+
+    @Override
+    public void updateCustomerReservation(String nic, String status) {
+
+    }
+
+    @Override
+    public CustomerDTO searchCustomerByName(String name) {
+        return null;
+    }
+
+    @Override
+    public CustomerDTO searchCustomerByEmail(String email) {
+        return null;
+    }
+
+    @Override
+    public CustomerDTO searchCustomerByEmailAndPassword(String email, String password) {
+        return null;
+    }
 }
