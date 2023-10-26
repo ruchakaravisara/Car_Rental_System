@@ -20,6 +20,6 @@ public class CustomerController {
     @PostMapping
     public ResponseUtil addCustomer(CustomerDTO dto){
         service.addCustomer(dto);
-        return new ResponseUtil("Ok","Successfully Added",dto);
+        return new ResponseUtil("Ok","Successfully Added",null);
     }
 }
