@@ -25,4 +25,10 @@ public class CustomerController {
         service.deleteCustomer(id);
         return new ResponseUtil("Ok","Successfully Deleted",id);
     }
+
+    @PutMapping
+    public ResponseUtil updateCustomer(CustomerDTO dto){
+        service.updateCustomer(dto);
+        return new ResponseUtil("Ok",dto.getNic()+": Updated.!",null);
+    }
 }
