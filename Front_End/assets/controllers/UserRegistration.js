@@ -22,9 +22,17 @@ $("#btnSignUp").click(function () {
     data.append("password",customerPassword);
     data.append("contactNumber",contactNumber);
     data.append("address",customerAddress);
-
     data.append("img", file, fileName);
-
     data.append("status",customerStatus);
+
+    $.ajax({
+        url:baseURL+"customer",
+        method:"post",
+        data:data,
+        async:true,
+        contentType:false,
+        processData:false,
+
+    });
 
 });
