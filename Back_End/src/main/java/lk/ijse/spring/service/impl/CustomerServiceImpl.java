@@ -53,7 +53,11 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public void updateCustomer(CustomerDTO dto) {
-
+        if (!repo.existsById(dto.getNic())){
+            throw new RuntimeException("Customer"+dto.getNic()+"Not available");
+        }
+        Customer map = mapper.map(dto, Customer.class);
+        repo.save(map);
     }
 
     @Override
