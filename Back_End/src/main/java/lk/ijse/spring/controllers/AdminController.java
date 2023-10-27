@@ -4,10 +4,7 @@ import lk.ijse.spring.dto.AdminDTO;
 import lk.ijse.spring.service.AdminService;
 import lk.ijse.spring.util.ResponseUtil;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/admin")
@@ -20,5 +17,10 @@ public class AdminController {
     public ResponseUtil addAdmin(AdminDTO dto){
         service.addAdmin(dto);
         return new ResponseUtil("Ok", dto.getAdminId()+"Added",null);
+    }
+    @PutMapping
+    public ResponseUtil updateAdmin(@RequestBody AdminDTO dto){
+        service.updateAdmin(dto);
+        return new ResponseUtil("Ok",dto.getAdminId()+": Updated!",null);
     }
 }
