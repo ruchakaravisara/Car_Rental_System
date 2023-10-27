@@ -22,7 +22,6 @@ public class DriverServiceImpl implements DriverService {
         if (repo.existsById(dto.getDriverID())) {
             throw new RuntimeException("Driver "+dto.getDriverID()+"Exist.");
         }
-
         repo.save(mapper.map(dto, Driver.class));
     }
 
