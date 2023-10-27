@@ -6,6 +6,8 @@ import lk.ijse.spring.util.ResponseUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
+
 @RestController
 @RequestMapping("/admin")
 @CrossOrigin
@@ -27,5 +29,10 @@ public class AdminController {
     public ResponseUtil deleteAdmin(String id){
         service.deleteAdmin(id);
         return new ResponseUtil("Ok",id+" : Deleted.",null);
+    }
+    @GetMapping
+    public ResponseUtil getAllAdmin(){
+        ArrayList<AdminDTO> allAdmins = service.getAllAdmin();
+        return new ResponseUtil("Ok","Done",allAdmins);
     }
 }
