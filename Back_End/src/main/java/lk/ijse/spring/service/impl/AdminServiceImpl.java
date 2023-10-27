@@ -1,6 +1,7 @@
 package lk.ijse.spring.service.impl;
 
 import lk.ijse.spring.dto.AdminDTO;
+import lk.ijse.spring.entity.Admin;
 import lk.ijse.spring.repo.AdminRepo;
 import lk.ijse.spring.service.AdminService;
 import org.modelmapper.ModelMapper;
@@ -20,7 +21,10 @@ public class AdminServiceImpl implements AdminService {
 
     @Override
     public void addAdmin(AdminDTO dto) {
-
+        if (repo.existsById(dto.getAdminId())) {
+            throw new RuntimeException("Admin "+dto.getAdminId()+" Already Exist.");
+        }
+        repo.save(mapper.map(dto, Admin.class));
     }
 
     @Override
