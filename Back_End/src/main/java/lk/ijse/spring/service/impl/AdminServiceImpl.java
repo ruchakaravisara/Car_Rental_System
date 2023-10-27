@@ -5,6 +5,7 @@ import lk.ijse.spring.entity.Admin;
 import lk.ijse.spring.repo.AdminRepo;
 import lk.ijse.spring.service.AdminService;
 import org.modelmapper.ModelMapper;
+import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -45,6 +46,7 @@ public class AdminServiceImpl implements AdminService {
 
     @Override
     public ArrayList<AdminDTO> getAllAdmin() {
-        return null;
+        return mapper.map(repo.findAll(), new TypeToken<ArrayList<AdminDTO>>() {
+        }.getType());
     }
 }
