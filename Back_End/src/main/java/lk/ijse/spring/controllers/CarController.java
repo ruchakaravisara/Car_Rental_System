@@ -23,4 +23,9 @@ public class CarController {
         service.updateCar(dto);
         return new ResponseUtil("Ok",dto.getRegistrationNumber()+": Updated.",null);
     }
+    @DeleteMapping(params = "registrationNumber")
+    public ResponseUtil deleteCar(String registrationNumber){
+        service.deleteCar(registrationNumber);
+        return new ResponseUtil("Ok",registrationNumber+" : Deleted",null);
+    }
 }
