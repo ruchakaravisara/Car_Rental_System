@@ -37,7 +37,10 @@ public class AdminServiceImpl implements AdminService {
 
     @Override
     public void deleteAdmin(String id) {
-
+        if (!repo.existsById(id)){
+            throw new RuntimeException("Driver "+id+" is Not Available.");
+        }
+        repo.deleteById(id);
     }
 
     @Override
