@@ -23,4 +23,9 @@ public class AdminController {
         service.updateAdmin(dto);
         return new ResponseUtil("Ok",dto.getAdminId()+": Updated!",null);
     }
+    @DeleteMapping(params = "id")
+    public ResponseUtil deleteAdmin(String id){
+        service.deleteAdmin(id);
+        return new ResponseUtil("Ok",id+" : Deleted.",null);
+    }
 }
