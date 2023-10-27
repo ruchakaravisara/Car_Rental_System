@@ -6,6 +6,8 @@ import lk.ijse.spring.util.ResponseUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
+
 @RestController
 @RequestMapping("/car")
 @CrossOrigin
@@ -27,5 +29,16 @@ public class CarController {
     public ResponseUtil deleteCar(String registrationNumber){
         service.deleteCar(registrationNumber);
         return new ResponseUtil("Ok",registrationNumber+" : Deleted",null);
+    }
+    @GetMapping
+    public ResponseUtil getAllCars(){
+        ArrayList<CarDTO> allCars = service.getAllCars();
+        return new ResponseUtil("Ok"," Success.",allCars);
+    }
+
+    @GetMapping(params = "registrationNumber")
+    public ResponseUtil getCarUsingRegisterNumber(String registrationNumber) {
+        CarDTO dto = service.searchCarByRegistrationNumber(registrationNumber);
+        return new ResponseUtil("Ok", "Done", dto);
     }
 }
