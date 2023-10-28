@@ -31,7 +31,7 @@ let customerPasswordField = $('#txtCustomerPassword');
 let cusNameRegEX = /^[A-z ]{5,20}$/;
 let cusNicRegEX = /^[0-9V]{5,20}$/;
 let cusLicenseRegEXX =/^[0-9]{5,10}$/;
-let cusContactRegEXx = /^[0-9]{10,14}$/;
+let cusContactRegEXx = /^[0-9]{10}$/;
 let cusEmailRegEx =/^[A-Za-z0-9]{1,}(@gmail.com)$/;
 let cusAddressRegEx=/^[0-9/A-z. ,]{3,}$/;
 let cusPasswordRegEX=/^[0-9A-z]{4,}$/;
@@ -102,28 +102,43 @@ customerPasswordField.on('keyup', function () {
 ///////////////////////////////////////////////
 
 // disable tab
-$("#txtCustomerID,#txtCustomerName,#txtCustomerAddress,#txtCustomerSalary").keydown(function (e) {
+$("#txtCustomerName,#txtCustomerNIC,#txtCustomerDrivingLicense,#txtCustomerContactNumber,#txtCustomerEmail,#txtCustomerAddress,#txtCustomerPassword").keydown(function (e) {
     if (e.key === "Tab") {
         e.preventDefault();
     }
 });
 
 // press enter to go next text fields (simulate tab)
-$("#txtCustomerID").keydown(function (e){
+$("#txtCustomerName").keydown(function (e){
     if(e.key === "Enter"){
-        $('#txtCustomerName').focus();
+        $('#txtCustomerNIC').focus();
     }
 });
 
-$("#txtCustomerName").keydown(function (e){
+$("#txtCustomerNIC").keydown(function (e){
+    if(e.key === "Enter"){
+        $('#txtCustomerDrivingLicense').focus();
+    }
+});
+
+$("#txtCustomerDrivingLicense").keydown(function (e){
+    if(e.key === "Enter"){
+        $('#txtCustomerContactNumber').focus();
+    }
+});
+$("#txtCustomerContactNumber").keydown(function (e){
+    if(e.key === "Enter"){
+        $('#txtCustomerEmail').focus();
+    }
+});
+$("#txtCustomerEmail").keydown(function (e){
     if(e.key === "Enter"){
         $('#txtCustomerAddress').focus();
     }
 });
-
 $("#txtCustomerAddress").keydown(function (e){
     if(e.key === "Enter"){
-        $('#txtCustomerSalary').focus();
+        $('#txtCustomerPassword').focus();
     }
 });
 
