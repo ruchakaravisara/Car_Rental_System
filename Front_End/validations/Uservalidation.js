@@ -86,6 +86,9 @@ let invalidNameMessage = $('#invalidName');
 let invalidNICMessage = $('#invalidNic');
 let invalidLicenseMessage = $('#invalidLicense');
 let invalidContactMessage = $('#invalidContact');
+let invalidEmailMessage = $('#invalidEmail');
+let invalidAddressMessage = $('#invalidAddress');
+let invalidPasswordMessage = $('#invalidPassword');
 
 //hide at beginning
 customerFormHideErrorMessages()
@@ -95,6 +98,10 @@ function customerFormHideErrorMessages() {
     invalidNICMessage.hide();
     invalidLicenseMessage.hide();
     invalidContactMessage.hide();
+    invalidEmailMessage.hide();
+    invalidAddressMessage.hide();
+    invalidPasswordMessage.hide();
+
 }
 
 // keyup functions
