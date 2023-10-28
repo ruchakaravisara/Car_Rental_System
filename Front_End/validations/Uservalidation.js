@@ -1,49 +1,4 @@
-/*
-const cusNameRegEX = /^[A-z ]{5,20}$/;
-const cusNicRegEX = /^[0-9V]{5,20}$/;
-const cusLicenseRegEXX =/^[0-9]{5,10}$/;
-const cusContactRegEXx = /^[0-9]{10,14}$/;
-const cusEmailRegEx =/^[A-Za-z0-9]{5,}(@gmail.com)$/;
-const cusAddressRegEx=/^[0-9/A-z. ,]{3,}$/;
-const cusPasswordRegEX=/^[0-9A-z]{4,}$/;
 
-let customerValidations =[];
-customerValidations.push({reg:cusNameRegEX, field:$('#txtCustomerName'),error:'User Name Pattern Is Wrong:Ruchaka'});
-customerValidations.push({reg:cusNicRegEX, field:$('#txtCustomerNIC'),error:'User NIC Pattern Is Wrong:200136597678V'});
-customerValidations.push({reg:cusLicenseRegEXX, field:$('#txtCustomerDrivingLicense'),error:'User Name Pattern Is Wrong:123456'});
-customerValidations.push({reg:cusContactRegEXx, field:$('#txtCustomerContactNumber'),error:'User Name Pattern Is Wrong:0772167545'});
-customerValidations.push({reg:cusEmailRegEx, field:$('#txtCustomerEmail'),error:'User Name Pattern Is Wrong:user@gmail.com'});
-customerValidations.push({reg:cusAddressRegEx, field:$('#txtCustomerAddress'),error:'User Name Pattern Is Wrong:Galle'});
-customerValidations.push({reg:cusPasswordRegEX, field:$('#txtCustomerPassword'),error:'User Name Pattern Is Wrong:12345'});
-
-$("#txtCustomerName,#txtCustomerNIC,#txtCustomerDrivingLicense,#txtCustomerContactNumber,#txtCustomerEmail,#txtCustomerAddress,#txtCustomerPassword").on('keyup',function (event) {
-    checkValidity();
-});
-$("#txtCustomerName,#txtCustomerNIC,#txtCustomerDrivingLicense,#txtCustomerContactNumber,#txtCustomerEmail,#txtCustomerAddress,#txtCustomerPassword").on('blur',function (event) {
-    checkValidity();
-});
-
-function checkValidity() {
-    let errorCount =0;
-    for (let validation of customerValidations) {
-        if (validation.reg.test(validation.field.val())){
-            textSuccess(validation.field,"");
-        }else {
-            errorCount=errorCount+1;
-            setTextError(validation.field,validation.error);
-        }
-    }
-    setButtonState(errorCount);
-}
-function textSuccess(txtField,error) {
-    if (txtField.val().length <=0){
-        defaultText(txtField,"");
-    }else {
-        txtField.css('border','2px solid green');
-       $("#lblcusName").text(error);
-    }
-}
-*/
 let isValidCusName = false;
 let isValidNic = false;
 let isValidLicense = false;
@@ -65,7 +20,7 @@ function checkValidCustomer() {
 
 // text fields
 let customerNameField = $('#txtCustomerName');
-let customerNicField = $('#txtCustomerNic');
+let customerNicField = $('#txtCustomerNIC');
 let customerLicenseField = $('#txtCustomerDrivingLicense');
 let customerContactField = $('#txtCustomerContactNumber');
 let customerEmailField = $('#txtCustomerEmail');
@@ -77,7 +32,7 @@ let cusNameRegEX = /^[A-z ]{5,20}$/;
 let cusNicRegEX = /^[0-9V]{5,20}$/;
 let cusLicenseRegEXX =/^[0-9]{5,10}$/;
 let cusContactRegEXx = /^[0-9]{10,14}$/;
-let cusEmailRegEx =/^[A-Za-z0-9]{5,}(@gmail.com)$/;
+let cusEmailRegEx =/^[A-Za-z0-9]{1,}(@gmail.com)$/;
 let cusAddressRegEx=/^[0-9/A-z. ,]{3,}$/;
 let cusPasswordRegEX=/^[0-9A-z]{4,}$/;
 
@@ -91,7 +46,7 @@ let invalidAddressMessage = $('#invalidAddress');
 let invalidPasswordMessage = $('#invalidPassword');
 
 //hide at beginning
-customerFormHideErrorMessages()
+customerFormHideErrorMessages();
 
 function customerFormHideErrorMessages() {
     invalidNameMessage.hide();
@@ -105,29 +60,44 @@ function customerFormHideErrorMessages() {
 }
 
 // keyup functions
-// Validate ID
+
 customerNameField.on('keyup', function () {
     isValidCusName = isValid(cusNameRegEX, customerNameField.val());
     MakeChanges(isValidCusName,customerNameField,invalidNameMessage);
 });
 
-// Validate Name
-customerNameField.on('keyup', function () {
-    isValidName = isValid(regexName, customerNameField.val());
-    MakeChanges(isValidName,customerNameField,invalidNameMessage);
+
+customerNicField.on('keyup', function () {
+    isValidNic = isValid(cusNicRegEX, customerNicField.val());
+    MakeChanges(isValidNic,customerNicField,invalidNICMessage);
 });
 
-// validate address
+
+customerLicenseField.on('keyup', function () {
+    isValidLicense = isValid(cusLicenseRegEXX, customerLicenseField.val());
+    MakeChanges(isValidLicense,customerLicenseField,invalidLicenseMessage);
+});
+
+
+customerContactField.on('keyup', function () {
+    isValidContact = isValid(cusContactRegEXx, customerContactField.val());
+    MakeChanges(isValidContact,customerContactField,invalidContactMessage);
+});
+customerEmailField.on('keyup', function () {
+    isValidEmail = isValid(cusEmailRegEx, customerEmailField.val());
+    MakeChanges(isValidEmail,customerEmailField,invalidEmailMessage);
+});
+
 customerAddressField.on('keyup', function () {
-    isValidAddress = isValid(regexAddress, customerAddressField.val());
+    isValidAddress = isValid(cusAddressRegEx, customerAddressField.val());
     MakeChanges(isValidAddress,customerAddressField,invalidAddressMessage);
 });
-
-// validate salary
-customerSalaryField.on('keyup', function () {
-    isValidSalary = isValid(regexSalary, customerSalaryField.val());
-    MakeChanges(isValidSalary,customerSalaryField,invalidSalaryMessage);
+customerPasswordField.on('keyup', function () {
+    isValidPassword = isValid(cusPasswordRegEX, customerPasswordField.val());
+    MakeChanges(isValidPassword,customerPasswordField,invalidPasswordMessage);
 });
+
+
 
 ///////////////////////////////////////////////
 
