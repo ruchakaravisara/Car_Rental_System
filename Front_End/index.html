@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="assets/css/normalize.css">
 
 
-
 </head>
 <body>
 <header id="UserDashBoardHead">
@@ -46,12 +45,15 @@
         <form id="userRegisterForm">
             <div>
                 <input id="txtCustomerName" type="text" class="form-control"  placeholder="Enter Name" name="name">
+                <small id="invalidName" class="text-danger">Invalid ID</small>
                 <input id="txtCustomerNIC" type="text" class="form-control"  placeholder="Enter NIC Number" name="nic">
-
+                <small id="invalidNic" class="text-danger">Invalid ID</small>
             </div>
             <div>
                 <input id="txtCustomerDrivingLicense" type="text" class="form-control"  placeholder="Enter Driving License" name="drivingLicense">
+                <small id="invalidLicense" class="text-danger">Invalid ID</small>
                 <input id="txtCustomerContactNumber" type="text" class="form-control"  placeholder="Enter Contact Number" name="contactNumber">
+                <small id="invalidContact" class="text-danger">Invalid ID</small>
             </div>
             <div>
                 <input id="txtCustomerEmail" type="text" class="form-control" placeholder="Enter Email" name="email">
@@ -413,5 +415,8 @@
 <script src="controllers/UserRegistration.js"></script>
 <script src="controllers/userCheckout.js"></script>
 <script src="controllers/storecontroller.js"></script>
+<script src="validations/CommonFunction.js"></script>
+<script src="validations/Uservalidation.js"></script>
+
 </body>
 </html>
