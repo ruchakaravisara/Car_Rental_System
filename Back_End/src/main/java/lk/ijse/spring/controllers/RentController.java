@@ -1,13 +1,13 @@
 package lk.ijse.spring.controllers;
 
 import lk.ijse.spring.dto.RentalDTO;
+import lk.ijse.spring.dto.Rental_DTO;
 import lk.ijse.spring.service.RentalService;
 import lk.ijse.spring.util.ResponseUtil;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.ArrayList;
 
 @RestController
 @RequestMapping("/rental")
@@ -20,5 +20,10 @@ public class RentController {
     public ResponseUtil saveReservation(RentalDTO dto){
         service.addRental(dto);
         return new ResponseUtil("Ok",dto.getMail()+ " Reservation Added",null);
+    }
+    @GetMapping
+    public ResponseUtil getAllRents(){
+        ArrayList<Rental_DTO> allRents = service.getAllRents();
+        return new ResponseUtil("Ok","Done.",allRents);
     }
 }
