@@ -15,6 +15,7 @@ import lk.ijse.spring.repo.RentalRepo;
 import lk.ijse.spring.service.RentalService;
 import lk.ijse.spring.util.CountDays;
 import org.modelmapper.ModelMapper;
+import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
@@ -147,7 +148,8 @@ public class RentalServiceImpl implements RentalService {
 
     @Override
     public ArrayList<Rental_DTO> getAllRents() {
-        return null;
+        return mapper.map(repo.findAll(), new TypeToken<ArrayList<Rental_DTO>>() {
+        }.getType());
     }
 
     @Override
