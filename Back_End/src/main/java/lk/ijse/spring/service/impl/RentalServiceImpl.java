@@ -57,7 +57,91 @@ public class RentalServiceImpl implements RentalService {
         rental.setPickupLocation(pickupLocation);
         rental.setReturnLocation(returnLocation);
         rental.setRentalDetailList(new ArrayList<>());
+        int count =0;
+        double damageWaveCost=0;
+        double amount =0;
+        double carAmount =0;
+        for (String s : dto.getRentalDetailList()) {
+            ObjectMapper objectMapper = new ObjectMapper();
+            try {
+                CartDTO cartDTO = objectMapper.readValue(s, CartDTO.class);
 
+                RentalDetail rentalDetail = new RentalDetail();
+
+                String projectPath = new File(this.getClass().getProtectionDomain().getCodeSource().getLocation().toURI()).getParentFile().getParentFile().getAbsolutePath();
+                File uploadDir = new File(projectPath + "/uploads");
+                System.out.println(projectPath);
+                uploadDir.mkdir();
+
+                MultipartFile file = dto.getFile().get(count);
+                count=count+1;
+                System.out.println(file);
+                file.transferTo(new File(uploadDir.getAbsolutePath() + "/" + file.getOriginalFilename()));
+                rentalDetail.setDamageWaiverImageLocation("uploads/"+file.getOriginalFilename());
+
+
+                if (cartDTO.getDriver() == "added"){
+
+                }
+
+                Car car = carRepo.findCarByRegistrationNumber(cartDTO.getId());
+                rentalDetail.setCar(car);
+                rentalDetail.setPickupDate(LocalDate.parse(cartDTO.getPickUpdate()));
+                rentalDetail.setReturnDate(LocalDate.parse(cartDTO.getReturnDate()));
+                rentalDetail.setId(rental.getRentalId()+"-"+car.getRegistrationNumber());
+                rentalDetail.setStatus("Pending");
+                rentalDetail.setRental(rental);
+                switch (rentalDetail.getCar().getType()){
+                    case "General":
+                        damageWaveCost=damageWaveCost+10000;
+                        rentalDetail.setDamageWaiverAmount(10000);
+                        break;
+                    case "Luxury":
+                        damageWaveCost=damageWaveCost+20000;
+                        rentalDetail.setDamageWaiverAmount(20000);
+                        break;
+                    case "Premium":
+                        damageWaveCost=damageWaveCost+15000;
+                        rentalDetail.setDamageWaiverAmount(15000);
+                        break;
+                    default:
+
+                }
+
+
+                ArrayList<LocalDate> dates = CountDays.getDates(rentalDetail.getPickupDate(), rentalDetail.getReturnDate());
+
+                int size = dates.size();
+                if(size>=30){
+                    while(size>=30){
+                        amount=amount+(rentalDetail.getCar().getMonthlyRate());
+                        carAmount=carAmount+(rentalDetail.getCar().getMonthlyRate());
+                        size=size-30;
+                    }
+                    amount=amount+(size*rentalDetail.getCar().getDailyRate());
+                    carAmount=carAmount+(rentalDetail.getCar().getDailyRate());
+                }else{
+                    amount=amount+(size*rentalDetail.getCar().getDailyRate());
+                    carAmount=carAmount+(rentalDetail.getCar().getDailyRate());
+                }
+                rentalDetail.setAmount(carAmount);
+                carAmount=0;
+                rental.setTotalDamageWaiverAmount(damageWaveCost);
+                rental.setAmount(amount);
+                rental.getRentalDetailList().add(rentalDetail);
+
+
+            } catch (JsonProcessingException  e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (URISyntaxException e) {
+                e.printStackTrace();
+            }
+        }
+        count=0;
+
+        repo.save(rental);
 
     }
 
