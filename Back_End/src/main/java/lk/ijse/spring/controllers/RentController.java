@@ -26,4 +26,10 @@ public class RentController {
         ArrayList<Rental_DTO> allRents = service.getAllRents();
         return new ResponseUtil("Ok","Done.",allRents);
     }
+    @GetMapping(params = "nic")
+    public ResponseUtil checkLogCustomer(String nic) {
+        Rental_DTO dto = service.searchRentByNIC(nic);
+        return new ResponseUtil("200", "Login Success", dto);
+    }
+
 }
