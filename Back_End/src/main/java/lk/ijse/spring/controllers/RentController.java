@@ -29,7 +29,7 @@ public class RentController {
     @GetMapping(params = "nic")
     public ResponseUtil checkLogCustomer(String nic) {
         Rental_DTO dto = service.searchRentByNIC(nic);
-        return new ResponseUtil("200", "Login Success", dto);
+        return new ResponseUtil("Ok", "Login Success", dto);
     }
 
 }
