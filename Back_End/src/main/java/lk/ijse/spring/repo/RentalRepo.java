@@ -11,4 +11,7 @@ public interface RentalRepo extends JpaRepository<Rental,String> {
 
     @Query(value = "SELECT rentalId FROM Rental  where customer_nic=?1 ORDER BY rentalId DESC LIMIT 1",nativeQuery = true)
     String findLatestRentUsingNIC(String customer_nic);
+
+    @Query(value = "SELECT rentalId FROM Rental ORDER BY rentalId DESC LIMIT 1",nativeQuery = true)
+    String generateId();
 }
