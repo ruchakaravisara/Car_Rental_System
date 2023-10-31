@@ -1,4 +1,6 @@
-$("#btnAdminSave").click(function () {
+
+$("#btnAdminSave").click(function (){
+
     let adminData = $("#adminForm").serialize();
 
     $.ajax({
@@ -15,9 +17,29 @@ $("#btnAdminSave").click(function () {
             alert(jsObject.message);
         }
     });
-});
-loadAllAdmins();
 
+});
+
+loadAllAdmins();
+function loadAllAdmins() {
+    $("#tblAdmin").empty();
+    $.ajax({
+        url: baseURL+"admin",
+        dataType: "json",
+        success: function (resp) {
+
+            for (let admin of resp.data) {
+
+
+                var row = '<tr><td>' + admin.adminId + '</td><td>' +admin.email+ '</td><td>' + admin.username + '</td><td>' + admin.password + '</td></tr>';
+                $("#tblAdmin").append(row);
+            }
+            bindRowwClickEvents()
+            setTextFieldAdminValues("","","","")
+        }
+    });
+
+}
 
 function bindRowwClickEvents() {
     $("#tblAdmin>tr").click(function () {
@@ -89,22 +111,3 @@ $("#btnAdminUpdate").click(function () {
 
     });
 });
-function loadAllAdmins() {
-    $("#tblAdmin").empty();
-    $.ajax({
-        url: baseURL+"admin",
-        dataType: "json",
-        success: function (resp) {
-
-            for (let admin of resp.data) {
-
-
-                var row = '<tr><td>' + admin.adminId + '</td><td>' +admin.email+ '</td><td>' + admin.username + '</td><td>' + admin.password + '</td></tr>';
-                $("#tblAdmin").append(row);
-            }
-            bindRowwClickEvents()
-            setTextFieldAdminValues("","","","")
-        }
-    });
-
-}

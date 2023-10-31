@@ -1,3 +1,4 @@
+let baseURL ="http://localhost:8080/Back_End_war/";
 function loadAllDrivers() {
     $("#tblDriver").empty();
     $.ajax({
