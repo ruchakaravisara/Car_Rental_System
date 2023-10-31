@@ -20,6 +20,11 @@ public class AdminController {
         service.addAdmin(dto);
         return new ResponseUtil("Ok", dto.getAdminId()+"Added",null);
     }
+    @GetMapping
+    public ResponseUtil getAllAdmin(){
+        ArrayList<AdminDTO> allAdmins = service.getAllAdmin();
+        return new ResponseUtil("Ok","Done",allAdmins);
+    }
     @PutMapping
     public ResponseUtil updateAdmin(@RequestBody AdminDTO dto){
         service.updateAdmin(dto);
@@ -30,9 +35,5 @@ public class AdminController {
         service.deleteAdmin(id);
         return new ResponseUtil("Ok",id+" : Deleted.",null);
     }
-    @GetMapping
-    public ResponseUtil getAllAdmin(){
-        ArrayList<AdminDTO> allAdmins = service.getAllAdmin();
-        return new ResponseUtil("Ok","Done",allAdmins);
-    }
+
 }

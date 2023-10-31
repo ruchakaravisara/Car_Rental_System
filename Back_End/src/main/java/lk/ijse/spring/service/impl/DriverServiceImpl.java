@@ -18,6 +18,12 @@ public class DriverServiceImpl implements DriverService {
     private DriverRepo repo;
     @Autowired
     private ModelMapper mapper;
+
+    @Override
+    public DriverDTO searchDriverByDriverID(String name) {
+        return null;
+    }
+
     @Override
     public void addDriver(DriverDTO dto) {
         if (repo.existsById(dto.getDriverID())) {
