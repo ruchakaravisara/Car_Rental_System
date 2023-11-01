@@ -85,7 +85,7 @@ $("#txtAdminId,#txtAdminEmail,#txtAdminUserName,#txtAdminPassword").keydown(func
 });
 
 // press enter to go next text fields (simulate tab)
-$("#txtCustomerName").keydown(function (e){
+/*$("#txtCustomerName").keydown(function (e){
     if(e.key === "Enter"){
         $('#txtCustomerNIC').focus();
     }
@@ -116,6 +116,6 @@ $("#txtCustomerAddress").keydown(function (e){
     if(e.key === "Enter"){
         $('#txtCustomerPassword').focus();
     }
-});
+});*/
 
 
