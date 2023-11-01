@@ -31,5 +31,16 @@ public class CustomerDTO {
         this.imageLocation = imageLocation;
         this.status = status;
     }
+    public CustomerDTO(String name, String nic, String drivingLicense, String email, String password, String contactNumber, String address, String status, MultipartFile img) {
+        this.name = name;
+        this.nic = nic;
+        this.drivingLicense = drivingLicense;
+        this.email = email;
+        this.password = password;
+        this.contactNumber = contactNumber;
+        this.address = address;
+        this.status = status;
+        this.img = img;
+    }
 
 }

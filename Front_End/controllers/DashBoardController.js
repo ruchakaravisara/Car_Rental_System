@@ -6,7 +6,7 @@ $('#UserStore').css('display','none');
 $('#userCarCatalogue').css('display','none');
 $('#UserCheckOut').css('display','none');
 $('#UserViewCarRents').css('display','none');
-
+$("#updatecus").css('display','none');
 $('.Home').click(function (){
     $('#UserDashBoard').css('display','block');
 
@@ -22,7 +22,7 @@ $('.Home').click(function (){
     $(' #UserDashBoardHeadNav>ul>li:nth-child(1)>a').css('color','black');
     $('#UserDashBoardHeadNav>ul>li>a').css('font-weight','400');
     $(' #UserDashBoardHeadNav>ul>li:nth-child(1)>a').css('font-weight','800');
-
+    $("#updatecus").css('display','none');
 
 });
 
@@ -41,7 +41,7 @@ $('.Account').click(function (){
     $('#UserDashBoardHeadNav>ul>li>a').css('color','black');
     $('#UserDashBoardHeadNav>ul>li>a').css('font-weight','400');
     $(' #UserDashBoardHeadNav>ul>li:nth-child(2)>a').css('font-weight','800');
-
+    $("#updatecus").css('display','none');
 
 });
 
@@ -55,6 +55,7 @@ $('#logHere').click(function (){
     $('#userCarCatalogue').css('display','none');
     $('#UserCheckOut').css('display','none');
     $('#UserViewCarRents').css('display','none');
+    $("#updatecus").css('display','none');
 });
 
 $('.Store').click(function (){
@@ -71,6 +72,7 @@ $('.Store').click(function (){
     $('#UserDashBoardHeadNav>ul>li>a').css('color','black');
     $('#UserDashBoardHeadNav>ul>li>a').css('font-weight','400');
     $(' #UserDashBoardHeadNav>ul>li:nth-child(3)>a').css('font-weight','800');
+    $("#updatecus").css('display','none');
 });
 
 $('.CheckOut').click(function (){
@@ -88,4 +90,5 @@ $('.CheckOut').click(function (){
     $('#UserDashBoardHeadNav>ul>li>a').css('color','black');
     $('#UserDashBoardHeadNav>ul>li>a').css('font-weight','400');
     $(' #UserDashBoardHeadNav>ul>li:nth-child(4)>a').css('font-weight','800');
+    $("#updatecus").css('display','none');
 });

@@ -7,6 +7,17 @@
     background-size: cover;
 
 }*/
+#updatecus>div{
+    width: 50%;
+    position: relative;
+    left: 400px;
+    top: 100px;
+}
+#btnCancleCustomer{
+    position: relative;
+    right: 100px;
+    top: 70px;
+}
 
 #carimage{
     height: 100vh;
