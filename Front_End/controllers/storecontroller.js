@@ -181,7 +181,7 @@ function loadAllCart() {
                     </td>
                     <td class="tblcolDamageUpload">
                         <div>
-                            <img src="assets/img/uploadIcon.png">
+                            <img src="../assets/img/uploadicon.png">
                             <div>
                                 <p>Lost Damage Waiver</p>
                                 <input class="lostDamageWaiverFile" data-fileid="${res.data.registrationNumber}"  type="file"  >
@@ -191,7 +191,7 @@ function loadAllCart() {
                     </td>
                     <td class="tblcoldelete">
                         <button data-id="${res.data.registrationNumber}" type="button" class="btn btnCartDeleteCheckOut">
-                            <img src="assets/img/circleDelete.png">
+                            <img src="../assets/img/delete.png">
                         </button>
 
                     </td>
@@ -225,7 +225,7 @@ function loadAllCart() {
                     </td>
                     <td class="tblcolDamageUpload">
                         <div>
-                            <img src="assets/img/uploadIcon.png">
+                            <img src="../assets/img/uploadicon.png">
                             <div>
                                 <p>Lost Damage Waiver</p>
                                 <input class="lostDamageWaiverFile" data-fileid="${res.data.registrationNumber}" type="file"  >
@@ -235,7 +235,7 @@ function loadAllCart() {
                     </td>
                     <td class="tblcoldelete">
                          <button data-id="${res.data.registrationNumber}" type="button" class="btn btnCartDeleteCheckOut">
-                            <img src="assets/img/circleDelete.png">
+                            <img src="../assets/img/delete.png">
                         </button>
 
                     </td>
@@ -269,7 +269,7 @@ function loadAllCart() {
                     </td>
                     <td class="tblcolDamageUpload">
                         <div>
-                            <img src="assets/img/uploadIcon.png">
+                            <img src="../assets/img/uploadicon.png">
                             <div>
                                 <p>Lost Damage Waiver</p>
                                 <input class="lostDamageWaiverFile" data-fileid="${res.data.registrationNumber}" class="damageImg" type="file"  >
@@ -279,7 +279,7 @@ function loadAllCart() {
                     </td>
                     <td class="tblcoldelete">
                          <button data-id="${res.data.registrationNumber}" type="button" class="btn btnCartDeleteCheckOut">
-                            <img src="assets/img/circleDelete.png">
+                            <img src="../assets/img/delete.png">
                         </button>
 
                     </td>
@@ -312,7 +312,7 @@ function loadAllCart() {
                     </td>
                     <td class="tblcolDamageUpload">
                         <div>
-                            <img src="assets/img/uploadIcon.png">
+                            <img src="../assets/img/uploadicon.png">
                             <div>
                                 <p>Lost Damage Waiver</p>
                                 <input class="lostDamageWaiverFile" data-fileid="${res.data.registrationNumber}" type="file">
@@ -322,7 +322,7 @@ function loadAllCart() {
                     </td>
                     <td class="tblcoldelete">
                          <button data-id="${res.data.registrationNumber}" type="button" class="btn btnCartDeleteCheckOut">
-                            <img src="assets/img/circleDelete.png">
+                            <img src="../assets/img/delete.png">
                         </button>
 
                     </td>

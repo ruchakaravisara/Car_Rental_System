@@ -1,9 +1,11 @@
+
 function loadAllCustomers() {
     $("#tblCustomerVerification").empty();
     $.ajax({
-       url:baseURL+"customer",
-       dataType: "json",
+        url: baseURL+"customer",
+        dataType: "json",
         success: function (resp) {
+
             for (let customer of resp.data) {
 
                 switch (customer.status) {
@@ -136,4 +138,8 @@ function loadAllCustomers() {
             });
         }
     });
+
+
 }
+
+loadAllCustomers();

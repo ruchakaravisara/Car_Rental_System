@@ -1,4 +1,4 @@
-let baseURL="http://localhost:8080/Back_End_war/";
+
 $("#btnCarSave").click(function (){
 
     let carBrand = $("#txtCarBrand").val();
@@ -70,7 +70,45 @@ $("#btnCarSave").click(function (){
 
 loadAllCars();
 
+function loadAllCars() {
+    $("#tBodyCarDetail").empty();
+    $.ajax({
+        url: baseURL+"car",
+        dataType: "json",
+        success: function (resp) {
 
+            for (let c of resp.data) {
+
+                $("#tBodyCarDetail").append(
+                    ` <tr>
+                    <td>${c.registrationNumber}</td>
+                    <td>${c.brand}</td>
+                    <td>${c.model}</td>
+                    <td>${c.type}</td>
+                    <td>${c.transmissionType}</td>
+                    <td>${c.fuelType}</td>
+                    <td>${c.numberOfPassengers}</td>
+                    <td>${c.color}</td>
+                    <td>${c.freeMileage}</td>
+                    <td>${c.freeMonthlyMileage}</td>
+                    <td>${c.dailyRate}</td>
+                    <td>${c.monthlyRate}</td>
+                    <td>${c.priceForExtraKM}</td>
+                    <td>${c.lastServiceMileage}</td>
+                    <td>${c.availability}</td>
+
+                </tr>`
+                );
+
+            }
+            bindCarRowClickEvents();
+            setccTextFieldValues("","","","","","","","","","","","","","","","","","","",)
+
+        }
+
+    });
+
+}
 
 function bindCarRowClickEvents() {
     $("#tBodyCarDetail>tr").click(function () {
@@ -223,7 +261,8 @@ $("#btnCarUpdate").click(function () {
 
         },
         error:function(error){
-
+            // let cause= JSON.parse(error.responseText).message;
+            // alert(cause);
         }
     });
     setccTextFieldValues("","","","","","","","","","","","","","","","","","","",)
@@ -276,44 +315,5 @@ function setcccTextFieldValues(carRegistrationNumber,carBrand, carModel,carType,
     $("#file2").val(img2);
     $("#file3").val(img3);
     $("#file4").val(img4);
-
-}
-function loadAllCars() {
-    $("#tBodyCarDetail").empty();
-    $.ajax({
-        url: baseURL+"car",
-        dataType: "json",
-        success: function (resp) {
-
-            for (let c of resp.data) {
-
-                $("#tBodyCarDetail").append(
-                    ` <tr>
-                    <td>${c.registrationNumber}</td>
-                    <td>${c.brand}</td>
-                    <td>${c.model}</td>
-                    <td>${c.type}</td>
-                    <td>${c.transmissionType}</td>
-                    <td>${c.fuelType}</td>
-                    <td>${c.numberOfPassengers}</td>
-                    <td>${c.color}</td>
-                    <td>${c.freeMileage}</td>
-                    <td>${c.freeMonthlyMileage}</td>
-                    <td>${c.dailyRate}</td>
-                    <td>${c.monthlyRate}</td>
-                    <td>${c.priceForExtraKM}</td>
-                    <td>${c.lastServiceMileage}</td>
-                    <td>${c.availability}</td>
-
-                </tr>`
-                );
-
-            }
-            bindCarRowClickEvents();
-            setccTextFieldValues("","","","","","","","","","","","","","","","","","","",)
-
-        }
-
-    });
 
 }

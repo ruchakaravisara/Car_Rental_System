@@ -32,7 +32,7 @@ public class JpaConfig {
 
         DriverManagerDataSource ds = new DriverManagerDataSource();
         ds.setDriverClassName("com.mysql.jdbc.Driver");
-        ds.setUrl("jdbc:mysql://localhost:3306/carSystemm?createDatabaseIfNotExist=true");
+        ds.setUrl("jdbc:mysql://localhost:3306/carRentalSystem?createDatabaseIfNotExist=true");
         ds.setUsername("root");
         ds.setPassword("1234");
         return ds;

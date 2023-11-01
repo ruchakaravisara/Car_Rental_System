@@ -1,21 +1,5 @@
-
-function loadAllDrivers() {
-    $("#tblDriver").empty();
-    $.ajax({
-        url: baseURL+"driver",
-        dataType: "json",
-        success: function (resp) {
-            for (let driver of resp.data) {
-                var row = '<tr><td>' + driver.driverID + '</td><td>' + driver.name+ '</td><td>' + driver.nic + '</td><td>' + driver.address + '</td><td>' + driver.drivingLicense + '</td><td>' + driver.dob + '</td><td>' + driver.status+ '</td></tr>';
-                $("#tblDriver").append(row);
-            }
-            bindddRowClickEvents()
-            setTextDriverFieldValues("","","","","","","")
-        }
-    });
-
-}
 $("#btnDriverSave").click(function (){
+
     let id=  $("#did").val();
     let dname=  $("#dname").val();
     let dnic=  $("#dnic").val();
@@ -54,6 +38,26 @@ $("#btnDriverSave").click(function (){
 });
 
 loadAllDrivers();
+function loadAllDrivers() {
+    $("#tblDriver").empty();
+    $.ajax({
+        url: baseURL+"driver",
+        dataType: "json",
+        success: function (resp) {
+
+            for (let driver of resp.data) {
+
+
+                var row = '<tr><td>' + driver.driverID + '</td><td>' + driver.name+ '</td><td>' + driver.nic + '</td><td>' + driver.address + '</td><td>' + driver.drivingLicense + '</td><td>' + driver.dob + '</td><td>' + driver.status+ '</td></tr>';
+                $("#tblDriver").append(row);
+            }
+            bindddRowClickEvents()
+            setTextDriverFieldValues("","","","","","","")
+        }
+    });
+
+}
+
 function bindddRowClickEvents() {
     $("#tblDriver>tr").click(function () {
         let id = $(this).children(":eq(0)").text();
@@ -74,6 +78,7 @@ function bindddRowClickEvents() {
 
     });
 }
+
 function setTextDriverFieldValues(id, name, address, nic,licen,dateOfBirth,state) {
     $("#did").val(id);
     $("#dname").val(name);
