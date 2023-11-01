@@ -18,7 +18,7 @@ public class DriverDTO {
     private String name;
     private String nic;
     private String address;
-    private String drivingLicense;//wait
+    private String drivingLicense;
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate dob;

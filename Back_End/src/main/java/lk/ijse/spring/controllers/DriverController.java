@@ -16,7 +16,7 @@ public class DriverController{
     private DriverService service;
 
     @PostMapping
-    public ResponseUtil addDriver(DriverDTO dto){
+    public ResponseUtil addDriver(@RequestBody DriverDTO dto){
         service.addDriver(dto);
         return new ResponseUtil("Ok",dto.getDriverID()+ " Added Successfully.",null);
     }
