@@ -424,14 +424,17 @@
                     <div>
                         <h3>Driver Id</h3>
                         <input id="did" type="text" class="form-control" placeholder="Driver Id" name="driverID">
+                        <small id="invalidDriverID" class="text-danger">Invalid ID -(ex-D001)</small>
                     </div>
                     <div>
                         <h3>Name</h3>
                         <input id="dname" type="text" class="form-control" placeholder="Enter name" name="name">
+                        <small id="invalidDriverName" class="text-danger">Invalid Name -(ex-Driver)</small>
                     </div>
                     <div>
                         <h3>NIC</h3>
                         <input id="dnic" type="text" class="form-control"  placeholder="Enter nic" name="nic">
+                        <small id="invalidDriverNic" class="text-danger">Invalid Nic -(ex-200112989789)</small>
                     </div>
                 </div>
                 <div>
@@ -439,14 +442,17 @@
                     <div>
                         <h3>Address</h3>
                         <input id="daddress" type="text" class="form-control"  placeholder="Enter address" name="address">
+                        <small id="invalidDriverAddress" class="text-danger">Invalid Address -(Galle)</small>
                     </div>
                     <div>
                         <h3>Driving License</h3>
                         <input id="dlicen" type="text" class="form-control"   placeholder="Enter Number Of Driving License" name="drivingLicense">
+                        <small id="invalidDriverLisence" class="text-danger">Invalid Lisence -(ex-1234567)</small>
                     </div>
                     <div>
                         <h3>Date Of Birth</h3>
                         <input  type="date" class="form-control"  placeholder="Enter Date Of Birth" name="dob" id="dateOfBirth">
+
                     </div>
                 </div>
                 <div>
@@ -650,5 +656,6 @@
 <script src="controllers/CustomerController.js"></script>
 <script src="validations/AdminValidation.js"></script>
 <script src="validations/CommonFunction.js"></script>
+<script src="validations/DriverValidation.js"></script>
 </body>
 </html>
