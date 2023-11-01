@@ -498,14 +498,17 @@
                     <div>
                         <h3>Admin Id</h3>
                         <input id="txtAdminId" type="text" class="form-control" placeholder="Admin Id" name="adminId">
+                        <small id="invalidAdminID" class="text-danger">Invalid ID -(ex-A001)</small>
                     </div>
                     <div>
                         <h3>Email</h3>
                         <input id="txtAdminEmail"   type="text" class="form-control" placeholder="Enter Email" name="email">
+                        <small id="invalidADminEmail" class="text-danger">Invalid Email(ex-saman12@gmail.com)</small>
                     </div>
                     <div>
                         <h3>UserName</h3>
                         <input id="txtAdminUserName"  type="text" class="form-control"  placeholder="Enter Username" name="username">
+                        <small id="invalidAdminName" class="text-danger">Invalid Name(ex-Amalka)</small>
                     </div>
                 </div>
 
@@ -513,6 +516,7 @@
                     <div>
                         <h3>Password</h3>
                         <input id="txtAdminPassword"  id="" type="text" class="form-control"  placeholder="Enter Password" name="password">
+                        <small id="invalidAdminpassword" class="text-danger">Invalid Password(ex-12345)</small>
                     </div>
                     <div id="adminButtonField">
                         <button type="button" class="btn btn-success" id="btnAdminSave">Save</button>
@@ -644,5 +648,7 @@
 <script src="controllers/PaymentController.js"></script>
 <script src="controllers/DriverController.js"></script>
 <script src="controllers/CustomerController.js"></script>
+<script src="validations/AdminValidation.js"></script>
+<script src="validations/CommonFunction.js"></script>
 </body>
 </html>
