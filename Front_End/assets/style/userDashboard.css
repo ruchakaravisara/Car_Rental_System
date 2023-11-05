@@ -323,6 +323,7 @@
 }
 /*///////////////////////car view/////////////////////////*/
 
+
 #userCarCatalogue>div:nth-child(3){
     position: relative;
     top: 70px;
@@ -630,7 +631,19 @@
 
 
 
-
+#UserViewCarRents{
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    height: 100vh;
+    width: 100vw;
+    right: 10px;
+    background: url("../img/car4.jpg")no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
 
 
 #UserViewCarRents>div:nth-child(3){
